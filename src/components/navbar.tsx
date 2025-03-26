@@ -24,7 +24,7 @@ const navigationItems: INavigationItem[] = [
 
 export default function Navbar() {
   return (
-    <nav className='mt-2 border-b'>
+    <nav className='border-b'>
       <MaxWidthContainer className='flex flex-row items-center justify-between gap-4 py-2'>
         <Link href='/' className='p-1'>
           <Compass size={36} />

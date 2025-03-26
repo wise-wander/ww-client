@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Props) {
       <head />
       <body
         className={cn(
-          'bg-background min-h-screen font-sans text-black/90 antialiased',
+          'bg-background min-h-screen font-sans antialiased',
           geistSans.variable,
           geistMono.variable,
         )}
