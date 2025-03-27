@@ -1,26 +1,16 @@
 import { cn } from '@/lib/utils';
 import { Compass } from 'lucide-react';
 import Link from 'next/link';
-import MaxWidthContainer from './max-width-container';
-import { Button } from './ui/button';
+import MaxWidthContainer from '../max-width-container';
+import { Button } from '../ui/button';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from './ui/navigation-menu';
-
-type INavigationItem = {
-  href: string;
-  title: string;
-};
-
-const navigationItems: INavigationItem[] = [
-  { href: '/discover', title: 'Discover' },
-  { href: '/review', title: 'Review' },
-  { href: '/more', title: 'More' },
-];
+} from '../ui/navigation-menu';
+import navigationItems from './navbar-navigation';
 
 export default function Navbar() {
   return (

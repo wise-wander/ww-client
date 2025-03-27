@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import { Toaster } from '@/components/ui/sonner';
 import { geistMono, geistSans } from '@/config/font';
@@ -24,9 +25,10 @@ export default function RootLayout({ children }: Props) {
           geistMono.variable,
         )}
       >
-        <div className='relative flex h-screen flex-col'>
+        <div className='relative flex h-screen flex-col gap-16'>
           <Navbar />
           <main className='relative grow'>{children}</main>
+          <Footer />
         </div>
         <Toaster />
       </body>

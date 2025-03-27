@@ -1,5 +1,6 @@
 'use client';
 
+import ISearchType from '@/types/search-type';
 import { ChangeEvent, useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -11,14 +12,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '../ui/select';
-import { categoryItems, ICategoryItem } from './category-item';
+import searchTypeItems from './search-types';
 
 export default function Search() {
   const [searchInput, setSearchInput] = useState<string>('');
-  const [selected, setSelected] = useState<ICategoryItem>(categoryItems[0]);
+  const [selected, setSelected] = useState<ISearchType>(searchTypeItems[0]);
 
   function handleSelectChange(value: string) {
-    const item = categoryItems.find((item) => item.value === value);
+    const item = searchTypeItems.find((item) => item.value === value);
     if (item) {
       setSelected(item);
     }
@@ -29,13 +30,13 @@ export default function Search() {
   }
 
   return (
-    <div className='flex flex-col items-center'>
-      <h1 className='mt-12 text-center text-5xl/relaxed font-extrabold'>
+    <div className='flex flex-col items-center gap-8'>
+      <h1 className='text-center text-5xl/relaxed font-extrabold'>
         {selected.title}
       </h1>
-      <div className='mt-12 flex flex-row items-center gap-4'>
+      <div className='flex flex-row items-center gap-4'>
         <Select
-          defaultValue={categoryItems[0].value}
+          defaultValue={searchTypeItems[0].value}
           onValueChange={handleSelectChange}
         >
           <SelectTrigger className='!h-12 w-40'>
@@ -43,7 +44,7 @@ export default function Search() {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              {categoryItems.map((item) => (
+              {searchTypeItems.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
                   <item.icon />
                   <span>{item.label}</span>

@@ -1,14 +1,7 @@
-import { BedDouble, Camera, House, LucideIcon, Utensils } from 'lucide-react';
+import ISearchType from '@/types/search-type';
+import { BedDouble, Camera, House, Utensils } from 'lucide-react';
 
-export type ICategoryItem = {
-  title: string;
-  value: string;
-  label: string;
-  icon: LucideIcon;
-  placeholder: string;
-};
-
-export const categoryItems: ICategoryItem[] = [
+const searchTypeItems: ISearchType[] = [
   {
     title: 'Where to?',
     value: 'search-all',
@@ -38,3 +31,5 @@ export const categoryItems: ICategoryItem[] = [
     placeholder: 'Restaurant or destination',
   },
 ];
+
+export default searchTypeItems;
