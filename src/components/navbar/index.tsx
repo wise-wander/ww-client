@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { Compass } from 'lucide-react';
 import Link from 'next/link';
 import MaxWidthContainer from '../max-width-container';
-import { Button } from '../ui/button';
+import LoginComponent from '../sign-in';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -35,9 +35,7 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className='flex flex-row items-center gap-1'>
-          <Button asChild>
-            <Link href='/login'>Login</Link>
-          </Button>
+          <LoginComponent />
         </div>
       </MaxWidthContainer>
     </nav>

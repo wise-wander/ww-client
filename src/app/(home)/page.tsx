@@ -20,7 +20,6 @@ export default function Home() {
           Explore the most famous attractions
         </h2>
         <p className='mt-1'>2025&apos;s Travelers&apos; Choice</p>
-        <div></div>
       </MaxWidthContainer>
     </div>
   );
